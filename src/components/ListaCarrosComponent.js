@@ -1,8 +1,22 @@
 import React from 'react'
 
-function ListaCarrosComponent() {
+function ListaCarrosComponent({lista}) {
+
+  const carros = lista;
+
   return (
-    <div>ListaCarrosComponent</div>
+    <>
+      <h2>ListaCarrosComponent</h2>
+      <ul>
+        {carros.map(c => {
+          
+            return <li key={c.id}>{c.modelo}</li>
+          }
+        
+        )}
+      </ul>
+    </>
+    
   )
 }
 

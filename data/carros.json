@@ -1,0 +1,31 @@
+{
+  "carros": [
+    {
+      "id":1,
+      "modelo":"Fit",
+      "montadora":"Honda",
+      "ano":1987,
+      "cor": "Azul",
+      "estoque": 4,
+      "link_img":""
+    },
+    {
+      "id":2,
+      "modelo":"Pálio",
+      "montadora":"Fiat",
+      "ano":1999,
+      "cor": "Prata",
+      "estoque": 7,
+      "link_img":""
+    },
+    {
+      "id":3,
+      "modelo":"Ka",
+      "montadora":"Ford",
+      "ano":1989,
+      "cor": "Vermelho",
+      "estoque": 2,
+      "link_img":""
+    }
+  ]
+}
