@@ -1,0 +1,28 @@
+1. Abrir pasta data no terminal. (Obs abrir uma nova aba de terminal)
+2. Executar:  npm init -y
+3. Executar: npm install json-server
+4. Adicionar start na tag scripts no package.json
+   "start": "json-server --watch ./carros.json"
+5. Mudar aba do terminal
+6. Na pasta api, criar o arquivo ApiService
+7. Criar a funçao async/await que recupera os dados
+  export async function getAll(){
+    const result = await fetch('http://localhost:3000/carros');
+    const carros = await result.json();
+
+    return carros;
+  }
+8. No componente PageMain
+  Usar useState
+    const [carrosLista, setCarrosLista] = useState([]);
+  
+  Usar useEffect
+    useEffect(() => {
+      async function load(){
+        const result = await getAll();
+        setCarrosLista(result);
+        console.log(result);
+      }
+    
+      load();
+    },[]);
